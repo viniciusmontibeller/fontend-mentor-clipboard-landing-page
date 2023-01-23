@@ -347,3 +347,12 @@ footer .social-media a:focus{
         padding: 0 20em;
     }
 }
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    background-color: hsl(210, 17%, 95%);
+}
+    .attribution a {
+    color: hsl(228, 45%, 44%);
+}
