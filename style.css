@@ -1,0 +1,349 @@
+:root{
+    --primary-btn: hsl(171, 66%, 44%);
+    --secondary-btn: hsl(233, 100%, 69%);
+    --neutral: hsl(201, 11%, 66%);
+    --neutral-dark: hsl(210, 10%, 33%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* -------------------------------- */
+
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: var(--neutral);
+    font-size: 18px;
+}
+
+header{
+    background-image: url("./images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+    padding: 6em 2.1em 0;
+    margin-bottom: 6em;
+}
+
+h1, h2, h3{
+    color: var(--neutral-dark);
+    margin-bottom: 1em;
+}
+
+header a{
+    margin: auto;
+    margin-bottom: 4em;
+    line-height: 0;
+}
+
+p{
+    margin-bottom: 4em;
+}
+
+header p{
+    margin-bottom: 2em;
+}
+
+.buttons{
+    gap: 2em;
+}
+
+.buttons .btn{
+    margin: 1em;
+    padding: 1em 2em;
+    border-radius: 3em;
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.buttons .ios{
+    background-color: var(--primary-btn);
+    box-shadow: 0px 2px 1px 1px hsl(171, 66%, 37%);
+}
+
+.buttons .ios:hover,
+.buttons .ios:focus{
+    background-color: hsl(171, 66%, 49%);
+}
+
+.buttons .mac{
+    background-color: var(--secondary-btn);
+    box-shadow: 0px 2px 1px 1px hsl(233, 75%, 57%);
+}
+
+.buttons .mac:hover,
+.buttons .mac:focus{
+    background-color: hsl(233, 100%, 74%);
+}
+
+.snippets {
+    text-align: center;
+    margin-bottom: 8em;
+    padding: 0 2em;
+}
+
+.snippets .snippets-funcions{
+    margin-top: 4em;
+}
+
+.tools{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.tools > div{
+    padding: 0 2em;
+}
+
+.tools .blacklist::before{
+    content: '';
+    background-image: url(./images/icon-blacklist.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.tools .text-snippets::before{
+    content: '';
+    background-image: url(./images/icon-text.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.tools .sneak-preview::before{
+    content: '';
+    background-image: url(./images/icon-preview.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.companies{
+    text-align: center;
+    margin-bottom: 8em;
+}
+
+.companies img{
+    padding: 3em;
+}
+
+.download{
+    text-align: center;
+    padding: 0 2em;
+    margin-bottom: 8em;
+}
+
+footer{
+    background-color: hsl(210, 17%, 95%);
+    text-align: center;
+    padding: 2em;
+}
+
+footer .footer-logo{
+    height: 3em;
+    margin-bottom: 1.5em;
+    margin: auto;
+}
+
+footer > div a{
+    line-height: 0;
+}
+
+footer nav{
+    margin-bottom: 2em;
+}
+
+footer nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+footer nav ul li{
+    padding: 0.5em 1em;
+}
+
+footer nav ul li a{
+    color: var(--neutral-dark);
+}
+
+footer nav ul li a:hover,
+footer nav ul li a:focus{
+    color: var(--primary-btn);
+}
+
+footer .social-media{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+footer .social-media a{
+    color: var(--neutral-dark);
+    font-size: 1.5em;
+}
+
+footer .social-media a:hover,
+footer .social-media a:focus{
+    color: var(--primary-btn);
+}
+
+
+@media(min-width: 700px){
+    
+    header{
+        background-image: url(./images/bg-header-desktop.png);
+    }
+
+    header p{
+        padding: 0 4em;
+    }
+    
+    section > p{
+        padding: 0 4em;
+    }
+    
+    .snippets .snippets-funcions{
+        display: flex;
+    }
+    
+    .snippets .snippets-funcions div{
+        flex: 1;
+    }
+    
+    .tools > div{
+        display: flex;
+        gap: 1.5em;
+    }
+    
+    .tools > div div{
+        flex: 1;
+    }
+    
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 2em 1em 7em;
+    }
+    
+    footer nav{
+        margin-bottom: 0em;
+    }
+    
+    footer div{
+        display: flex;
+        align-items: center;
+    }
+
+    footer > div div{
+        gap: 7em;
+    }
+    
+    footer .support{
+        max-width: 30em;
+        text-align: left;
+        margin-left: 7em;
+        margin-top: 0;
+        
+    }
+
+    footer .support li{
+        min-width: 8em;
+    }
+}
+
+@media(min-width: 950px){
+    footer .support{
+        flex-direction: row;
+    }
+
+}
+
+@media(min-width: 1024px){
+    .snippets > div{
+        display: flex;
+        gap: 2em;
+    }
+
+    .snippets{
+        padding: 0;
+    }
+
+    .snippets .snippets-funcions{
+        
+        flex-direction: column;
+        justify-content: center;
+        max-width: 22em;
+        margin-top: 0;
+        text-align: left;
+        gap: 4em;
+        padding-right: 2em;
+    }
+
+
+    .snippets .snippets-funcions div{
+        flex: 0;
+    }
+
+    .snippets .snippets-funcions div p{
+        margin-bottom: 0em;
+    }
+
+    .snippets img{
+        transform: translate(-68px);
+    }
+
+    .tools > div div{
+        padding: 0 1.5em;
+    }
+
+    footer{
+        padding-right: 7em;
+    }
+}
+
+@media(min-width: 1300px){
+    header p{
+        padding: 0 21em;
+    }
+    
+    section > p{
+        padding: 0 20em;
+    }
+}
